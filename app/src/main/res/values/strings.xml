@@ -11,6 +11,7 @@
     <string name="sign_up">Sign up</string>
     <string name="already_have_an_account">Already have an account?</string>
 
+<!--    Login and SignUp error texts-->
     <string name="err_email_field_is_required">E-mail is required.</string>
     <string name="err_email_is_invalid">E-mail is invalid.</string>
     <string name="err_username_field_is_required">Username is required.</string>

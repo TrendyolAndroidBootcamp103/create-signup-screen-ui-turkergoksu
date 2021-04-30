@@ -9,7 +9,7 @@ class PasswordValidator : Validator {
         "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$".toRegex()
     }
 
-    override fun validate(field: String): Int? = when {
+    override fun validate(field: String) = when {
         field.isEmpty() -> R.string.err_password_field_is_required
         field.length <= 7 -> R.string.err_password_is_too_short
         field.length > 40 -> R.string.err_password_is_too_long
