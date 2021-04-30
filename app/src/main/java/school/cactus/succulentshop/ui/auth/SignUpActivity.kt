@@ -6,6 +6,7 @@ import com.google.android.material.textfield.TextInputLayout
 import school.cactus.succulentshop.R
 import school.cactus.succulentshop.databinding.ActivitySignUpBinding
 import school.cactus.succulentshop.ui.auth.validators.EmailValidator
+import school.cactus.succulentshop.ui.auth.validators.PasswordValidator
 import school.cactus.succulentshop.ui.auth.validators.UsernameValidator
 
 class SignUpActivity : AppCompatActivity() {
@@ -13,6 +14,7 @@ class SignUpActivity : AppCompatActivity() {
 
     private val emailValidator by lazy { EmailValidator() }
     private val usernameValidator by lazy { UsernameValidator() }
+    private val passwordValidator by lazy { PasswordValidator() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +26,7 @@ class SignUpActivity : AppCompatActivity() {
             signUpButton.setOnClickListener {
                 emailTextInputLayout.validate()
                 usernameTextInputLayout.validate()
+                passwordTextInputLayout.validate()
             }
 
             alreadyHaveAnAccountButton.setOnClickListener {
@@ -43,6 +46,7 @@ class SignUpActivity : AppCompatActivity() {
     private fun TextInputLayout.validator() = when (this) {
         binding?.emailTextInputLayout -> emailValidator
         binding?.usernameTextInputLayout -> usernameValidator
+        binding?.passwordTextInputLayout -> passwordValidator
         else -> throw IllegalArgumentException("Cannot find any validator for the given TextInputLayout")
     }
 }
