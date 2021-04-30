@@ -6,13 +6,13 @@ import com.google.android.material.textfield.TextInputLayout
 import school.cactus.succulentshop.R
 import school.cactus.succulentshop.databinding.ActivitySignUpBinding
 import school.cactus.succulentshop.ui.auth.validators.EmailValidator
+import school.cactus.succulentshop.ui.auth.validators.UsernameValidator
 
 class SignUpActivity : AppCompatActivity() {
     private var binding: ActivitySignUpBinding? = null
 
-    private val emailValidator by lazy {
-        EmailValidator()
-    }
+    private val emailValidator by lazy { EmailValidator() }
+    private val usernameValidator by lazy { UsernameValidator() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +23,7 @@ class SignUpActivity : AppCompatActivity() {
         binding?.apply {
             signUpButton.setOnClickListener {
                 emailTextInputLayout.validate()
+                usernameTextInputLayout.validate()
             }
 
             alreadyHaveAnAccountButton.setOnClickListener {
@@ -41,6 +42,7 @@ class SignUpActivity : AppCompatActivity() {
 
     private fun TextInputLayout.validator() = when (this) {
         binding?.emailTextInputLayout -> emailValidator
+        binding?.usernameTextInputLayout -> usernameValidator
         else -> throw IllegalArgumentException("Cannot find any validator for the given TextInputLayout")
     }
 }
