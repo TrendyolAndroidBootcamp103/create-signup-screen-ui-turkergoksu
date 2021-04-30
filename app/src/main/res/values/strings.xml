@@ -6,4 +6,19 @@
     <string name="create_an_account">Create an account</string>
     <string name="this_field_is_required">This field is required.</string>
     <string name="identifier_is_too_short">Identifier is too short.</string>
+    <string name="e_mail">E-mail</string>
+    <string name="username">Username</string>
+    <string name="sign_up">Sign up</string>
+    <string name="already_have_an_account">Already have an account?</string>
+
+    <string name="err_email_field_is_required">E-mail is required.</string>
+    <string name="err_email_is_invalid">E-mail is invalid.</string>
+    <string name="err_username_field_is_required">Username is required.</string>
+    <string name="err_username_character_error">Username can only include a–z, 0–9 and _ characters.</string>
+    <string name="err_username_is_too_short">Username is too short.</string>
+    <string name="err_username_is_too_long">Username is too long.</string>
+    <string name="err_password_field_is_required">Password is required.</string>
+    <string name="err_password_is_too_short">Password is too short.</string>
+    <string name="err_password_is_too_long">Password is too long.</string>
+    <string name="err_password_must_provide_conditions">Password must contain one digit, one uppercase letter, one lowercase letter and one special character.</string>
 </resources>

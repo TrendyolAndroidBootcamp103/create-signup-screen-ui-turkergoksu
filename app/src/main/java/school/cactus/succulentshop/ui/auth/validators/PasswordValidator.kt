@@ -1,4 +1,6 @@
-package school.cactus.succulentshop
+package school.cactus.succulentshop.ui.auth.validators
+
+import school.cactus.succulentshop.R
 
 class PasswordValidator : Validator {
     override fun validate(field: String) = when {
