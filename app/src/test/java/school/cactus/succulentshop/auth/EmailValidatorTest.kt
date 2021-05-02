@@ -37,7 +37,7 @@ class EmailValidatorTest {
     @Test
     fun `given short e-mail as input, when validate is called, then validate should return err_email_is_invalid`() {
         // Given
-        val givenEmail = "t@g.c"
+        val givenEmail = "goks@gmail.com"
         val emailValidator = EmailValidator()
 
         // When
